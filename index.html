@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family ATM Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Family ATM</h1>
+        <div id="login-section">
+            <h2>Login</h2>
+            <input type="text" id="pin" placeholder="Enter PIN">
+            <button onclick="login()">Login</button>
+            <p id="login-message"></p>
+        </div>
+        <div id="atm-section" style="display:none;">
+            <h2>Welcome, <span id="user-name"></span>!</h2>
+            <div id="atm-menu">
+                <button onclick="checkBalance()">Check Balance</button>
+                <button onclick="showDeposit()">Deposit Money</button>
+                <button onclick="showWithdraw()">Withdraw Money</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+            <div id="deposit-section" style="display:none;">
+                <h3>Deposit Money</h3>
+                <input type="number" id="deposit-amount" placeholder="Enter amount">
+                <button onclick="deposit()">Deposit</button>
+                <p id="deposit-message"></p>
+            </div>
+            <div id="withdraw-section" style="display:none;">
+                <h3>Withdraw Money</h3>
+                <input type="number" id="withdraw-amount" placeholder="Enter amount">
+                <button onclick="withdraw()">Withdraw</button>
+                <p id="withdraw-message"></p>
+            </div>
+            <p id="balance-message"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
